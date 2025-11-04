@@ -9,8 +9,10 @@ print("""
 
 name = input("your name, lovely:\n> ")
 
+print(f"welcome back {name}! let's get this day started.\n")
+
 today = datetime.date.today()
-print(f"\nhi {name}, today is {today}. let's reflect on your day.\n")
+print(f"\nhi lovely, today is {today}. let's reflect on your day.\n")
 print("────────────────────────────────────")           
 
 mood = input("how are you feeling today (1-10)?\n> ")
@@ -43,3 +45,24 @@ print("healing is not linear, and you're allowed to have soft days 🌸")
 print("your worth is not measured by productivity, but by your heart 🫶")
 print("thank you for showing up for yourself today, even gently.\n")
 print("────────────────────────────────────────")
+
+import time
+import sys
+
+def blossom_drift():
+    message = "🌸 your care journal entry is blossoming into the log... 🌸"
+    petals = ["🌸", "🍃", "🌿", "🌸", "🍃"]
+    for char in message:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    for petals in petals:
+        sys.stdout.write(petals)
+        sys.stdout.flush()
+        time.sleep(0.3)
+    print("\n")
+
+print("\nsoft blossom drift around you...\n")
+blossom_drift()
+print("your care journal entry has been lovingly recorded. 🌷\n")
+

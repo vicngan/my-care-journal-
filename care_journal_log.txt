@@ -1,2 +1,4 @@
 2025-11-04, name: victoria, mood: 7, energy: 7, gratitude: my family, self-care: study :P, water: 2
 2025-11-04, name: victoria, mood: 6, energy: 7, gratitude: 8, self-care: sleep, water: 2
+2025-11-04, name: victoria, mood: 7, energy: 7, gratitude: family, self-care: sleep, water: 2
+2025-11-04, name: vic, mood: 7, energy: 8, gratitude: family, self-care: sleep, water: 2
