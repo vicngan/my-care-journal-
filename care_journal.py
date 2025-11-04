@@ -35,4 +35,11 @@ with open("care_journal_log.txt", "a") as log:
     log.write(f"{today}, name: {name}, mood: {mood}, energy: {energy}, gratitude: {gratitude}, self-care: {self_care}, water: {water}\n")
 
 print("your entry is save with love <3 ")
+print("────────────────────────────────────────")
 print(f"\nthank you for journaling today, {name}. remember to take care of yourself!\n")
+print("\n💗 softly reminding you:\n")
+print("you don't have to bloom every day to still be growing 🍃")
+print("healing is not linear, and you're allowed to have soft days 🌸")
+print("your worth is not measured by productivity, but by your heart 🫶")
+print("thank you for showing up for yourself today, even gently.\n")
+print("────────────────────────────────────────")
