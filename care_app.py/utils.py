@@ -117,4 +117,3 @@ if __name__ == "__main__":
     save_mood = append_mood_entry
     save_journal = append_journal_entry 
     cozy_menu(save_mood, save_journal)
-
