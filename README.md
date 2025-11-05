@@ -1,10 +1,29 @@
 # matcha-mood-tracker-
 # my-care-journal-
 
-A cozy, interactive journaling and self-care app designed to help users track their moods, habits, and personal growth in a visually calming, aesthetic environment. Users can:
-- Write journal entries and save drafts automatically
-- Receive daily affirmations to boost mental wellness 🌸
-- Track moods and wellness habits with customizable inputs
-- Visualize progress through charts or logs
+# Matcha Croquette Life Tracker 🍵💖
 
-Experience a playful, soothing interface with animations like floating blossoms and soft pastel themes 🍵💖 Perfect for anyone who wants to blend mindfulness, productivity, and a touch of playfullness in their daily routine!
+A cozy, interactive journaling and self-care app designed to help users reflect, track moods, and nurture themselves in a visually soothing, pastel-themed interface. Perfect for keeping your mental wellness, habits, and thoughts all in one safe, cheerful space.
+
+---
+
+## 🌟 Features
+
+- **Journal Entries 📝**: Write, save, and autosave your daily thoughts.
+- **Daily Affirmations 🌸**: Receive uplifting messages to boost your mood.
+- **Mood & Wellness Tracking 📊**: Log your emotional and wellness states.
+- **Soothing Interface ✨**: Soft pastel colors and blossom animations for a calming experience.
+- **Quick Controls**: Save, clear, and get affirmations with easy buttons.
+
+---
+
+## 💻 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+2. Navigate to project folder
+cd your-repo-name
+3. Run the app
+python gui_app.py
+
