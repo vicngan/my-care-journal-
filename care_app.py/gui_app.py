@@ -2,7 +2,6 @@
 import os #file operations
 import datetime
 import tkinter as tk #tkinter for GUI
-import tkinter as tk
 from tkinter import scrolledtext, messagebox #for text area and message boxes
 import utils #utility functions
 import threading #for autosave thread
@@ -20,6 +19,8 @@ TEXT = "#2E4A3A"      # deep green text
 
 DATA_DIR = Path("journals")
 DATA_DIR.mkdir(exist_ok=True)
+
+#----------------UTILIITY-------------------
 
 #autosave journal entry function for GUI
 def save_draft(nickname, content):
@@ -48,6 +49,8 @@ def affirmation_message(nickname):
     affirmation = random.choice(affirmations) #randomly choose an affirmation
     messagebox.showinfo("Affirmation", f"{affirmation}\n\n- from your care journal, {nickname}") #show affirmation message box
 
+#-------------ANIMATION-------------------
+
 #blossom drift effect for GUI
 def blossom_thread(canvas, stop_event):
     petals = ["🌸", "💮", "🌺"]
@@ -74,6 +77,8 @@ def blossom_thread(canvas, stop_event):
         time.sleep(0.05)
 
     typeprint = lambda text, speed=0.05: [canvas.create_text(200, 20 + i*20, text=char, font=("Arial", 12)) or time.sleep(speed) for i, char in enumerate(text.split('\n'))] #slow print function for GUI
+#------------------AUTOSAVE---------------------------
+
 #autosave loop function
 def autosave_loop(nickname, text_widget, stop_event):
     last_content = ""
@@ -86,6 +91,8 @@ def autosave_loop(nickname, text_widget, stop_event):
             save_draft(nickname, content)
             last_content = content
         time.sleep(3)  #autosave every 3 seconds
+
+#----------------------GUI---------------------------------
 
 #main GUI function
 def run_gui(nickname="lovely"):
@@ -103,6 +110,13 @@ def run_gui(nickname="lovely"):
     header_frame.pack(fill="x", pady=12) #pack header frame
     tk.Label(header_frame, text=f"{nickname}'s Care Journal 🌸", font=("Helvetica", 24, "bold"), bg=BG, fg=TEXT).pack()
     tk.Label(header_frame, text="A safe space to reflect and nurture yourself.", font=("Helveticaa", 14), bg=BG, fg=TEXT).pack()
+
+    #mood selector
+    mood_var = tk.StringVar(value="😊")
+    moods = ["😊 Happy", "😢 Sad", "😡 Angry", "😌 Calm", "😰 Anxious"]
+    tk.Label(root, text="how are you feeling today lovely:", bg=BG, font=("Helvetica",12)).pack()
+    mood_menu = tk.OptionMenu(root, mood_var, *moods)
+    mood_menu.pack(pady=5)
 
     #canvas for blossom drift
     CANVAS_WIDTH = 580
