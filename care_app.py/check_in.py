@@ -1,7 +1,14 @@
 #check_in.py
-from utils import append_mood_entry, blossom_drift
-from affirmation import get_affirmation
-import random
+import utils
+import affirmation
+from utils import blossom_drift
+
+import time
+def typeprint(text, speed=0.07):
+        for char in text:
+            print(char, end='', flush=True)
+            time.sleep(speed)
+        print()
 
 def run (nickname ="angel"):
     print(f"\hi {nickname}! i'm glad you're here. let's check in for just a moment:)\n")
@@ -12,8 +19,8 @@ def run (nickname ="angel"):
     body = input("\nhow is your body feeling today (on a scale of 1-10):")
     gratitude = input("in one word, what are you grateful for today:")
 
-    print(f"\nthank you for sharing with me {nickname}, i'm beyond proud of you and don't forget to be kind to yourself!\n")
-    print("remember, every feeling is valid and it's okay to have ups and downs. you're doing amazing!\n")
+    typeprint(f"\nthank you for sharing with me {nickname}, i'm beyond proud of you and don't forget to be kind to yourself!\n")
+    typeprint("remember, every feeling is valid and it's okay to have ups and downs. you're doing amazing!\n")
 
 
     if int(energy)<= 4 or int(body)<= 4:
@@ -24,20 +31,15 @@ def run (nickname ="angel"):
         print("there's a little spark in you today {nickname}. that's great! try to focus on activities that can help boost your energy and improve your mood. remember, it's okay to have ups and downs. you're doing amazing!\n")
     print("-----------------------------\n")
 
-    #gentle reflection 
-    print(f"here's a little note for you {nickname}:\n")
-    print("\n" + random.choice(get_affirmation) + "\n")
+    #gentle reflection    
+    typeprint(f"here's a little note for you {nickname}:\n")
     print("-----------------------------\n")
 
-    print("remember, no matter what, i am here for you and proud of you always <3\n")
-    print("take care lovely, and don't forget to treat yourself with kindness and compassion!\n")   
-    print("i'm proud of you for checking in at all, that's a big step towards self-care and well-being!\n")
-    print(f"here's an affirmation for you today {nickname}: \n")
-    print("you got this lovely <3\n") 
-
-#log mood entry
-    line = f"{mood},{energy},{body},{gratitude}\n"
-    append_mood_entry(line)
+    typeprint("remember, no matter what, i am here for you and proud of you always <3\n")
+    typeprint("take care lovely, and don't forget to treat yourself with kindness and compassion!\n")   
+    typeprint("i'm proud of you for checking in at all, that's a big step towards self-care and well-being!\n")
+    typeprint(f"here's an affirmation for you today {nickname}: \n")
+    typeprint("you got this lovely <3\n") 
 
     message = "see you next time lovely <3"
     for char in message:
@@ -49,8 +51,6 @@ def run (nickname ="angel"):
 
     blossom_drift()
 
-#optional test run when executed directly
+    #optional test run when executed directly
 if __name__ == "__main__":  
-    run("angel")
-
-    #back to homescreen
+        run("angel")
