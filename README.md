@@ -1,8 +1,6 @@
 # matcha-mood-tracker-
 # my-care-journal-
 
-# Matcha Croquette Life Tracker 🍵💖
-
 A cozy, interactive journaling and self-care app designed to help users reflect, track moods, and nurture themselves in a visually soothing, pastel-themed interface. Perfect for keeping your mental wellness, habits, and thoughts all in one safe, cheerful space.
 
 ---
