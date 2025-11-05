@@ -1,0 +1,75 @@
+Skills Acquired from Care Journal Project
+
+Python & Programming Fundamentals
+
+- Wrote modular Python code across multiple files (main.py, utils.py, journal.py, etc.)
+
+- Utilized standard libraries: os, datetime, random, time, threading
+
+- Managed file I/O for reading, writing, and appending journal entries
+
+- Implemented robust logic to handle empty inputs and save drafts automatically
+
+GUI Development (Tkinter)
+
+- Built a user-friendly interface with windows, frames, labels, buttons, and scrollable text areas
+
+- Applied layout management using .pack() and .place() effectively
+
+- Customized aesthetics with color palettes, fonts, and padding for a cozy, calming design
+
+- Integrated message boxes and alerts for user feedback
+
+Multi-threading & Background Processes
+
+- Used threads for background tasks like autosaving and animations without blocking the GUI
+
+- Implemented stop events to gracefully terminate background tasks
+
+Animation & UI Effects
+
+- Created a dynamic blossom drift animation with emojis (🌸, 💮, 🌺)
+
+- Combined animations with GUI interactions for engaging visual feedback
+
+Data Management & Organization
+
+- Structured journal entries with timestamps for easy tracking
+
+- Managed user data with a dedicated journals/ directory
+
+- Maintained clean file operations and avoided data loss
+
+User Experience & Interaction Design
+
+- Designed a supportive, safe interface for self-care journaling
+
+- Added affirmation messages and feedback after saving or clearing entries
+
+- Planned intuitive layouts with headers, footers, and clear action buttons
+
+Version Control & GitHub
+
+- Created and managed a Git repository for the project
+
+- Configured remotes, resolved push/pull conflicts, and managed upstream branches
+
+- Learned to handle non-fast-forward errors and merge remote changes
+
+Problem-Solving & Debugging
+
+- Debugged Tkinter layout issues and widget placement conflicts
+
+- Solved threading and autosave logic problems
+
+- Debugged file handling and Git workflow issues
+
+Soft Skills & Design Thinking
+
+- Conceptualized a user-centered design for a mental health/self-care app
+
+- Iterated on UI aesthetics, colors, and fonts to enhance user engagement
+
+- Balanced functionality with visual appeal for a positive user experience
+
+Languages: Python, Tkinter, Git&Github
