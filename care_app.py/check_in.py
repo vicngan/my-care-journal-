@@ -1,16 +1,16 @@
 #check_in.py
 import utils
 import affirmation
-from utils import blossom_drift
+from utils import blossom_drift #importing drift effect
 
 import time
-def typeprint(text, speed=0.07):
+def typeprint(text, speed=0.07): #slow print function
         for char in text:
             print(char, end='', flush=True)
             time.sleep(speed)
         print()
 
-def run (nickname ="angel"):
+def run (nickname ="angel"): #main check-in function
     print(f"\hi {nickname}! i'm glad you're here. let's check in for just a moment:)\n")
     print("no pressure lovely, just be honest with yourself and take your time!\n")
 

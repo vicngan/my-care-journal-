@@ -6,7 +6,7 @@ print("remember lovely, self-care is a journey and it's okay to take it one step
 print("-------------------------------\n")  
 print("let's breathe together for a minute... nice and slow.\n")
 
-for i in range(3):
+for i in range(3): #3 breaths
     print("breathe in... ")
     time.sleep(3)
     print("breathe out...\n")
@@ -20,6 +20,7 @@ print("1) take a short walk outside and enjoy nature\n")
 print("2) listen to your favorite music and dance around\n")
 print("3) write down three things you're grateful for\n")
 print("4) treat yourself to a healthy snack or drink\n")        
+
 activity = input("which activity would you like to try today lovely (choose 1, 2, 3, or 4)? ")  
 print("\n") 
 
@@ -35,9 +36,9 @@ else:
     print("that's okay lovely, sometimes it's hard to choose. remember, self-care is about doing what feels right for you in the moment. be kind to yourself <3\n")
 print("i'm so proud of you for taking this time for yourself today lovely. remember, self-care is a journey and every step you take is a step towards nurturing yourself <3\n") 
 
-from affirmation import affirmations
+from affirmation import affirmations #importing affirmations list
 import random
-affirmation = random.choice(affirmations)   
+affirmation = random.choice(affirmations)  #randomly choose an affirmation 
 
 print(f"here's a gentle affirmation for you lovely:\n")
 print(f"✨ {affirmation} ✨\n") 
@@ -53,8 +54,8 @@ import time
 import sys
 def blossom_drift():
     petals = ["🌸", "🍃", "🌿", "🌸", "🍃"]
-    for petals in petals:
-        sys.stdout.write(petals)
+    for petals in petals: #drift effect
+        sys.stdout.write(petals) #print without newline
         sys.stdout.flush()
         time.sleep(0.3)
     print("\n")

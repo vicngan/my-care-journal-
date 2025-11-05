@@ -13,13 +13,26 @@ def typeprint(text, speed=0.07): #slow print function
         print()
 
 def blossom_drift_vertical(): #vertical drift effect
-    petals = ["🌸", "  🌸", "    🌸", "      🌸"]
-    height = 8
-    for _ in range(8):  # only does a small gentle drift
+    petals = ["🌸", "💮", "🌺"]
+    chimes = ["✨ ✨", "💫 💫", "✨ ✨"]
+    height = 6
+
+    for _ in range(5):  # only does a small gentle drift
         petal = random.choice(petals)  #randomly choose a petal position
+        chimes = random.choice(chimes)  #randomly choose a chime sound
+        
         for i in range(height): #print petal at increasing heights
-            print("\n" * i + petal) #print petal with newlines
+            sys.stdout.write(" " *random.randint(0,8)) #slight horizontal shift
+            sys.stdout.flush()
+            time.sleep(0.1)
+            sys.stdout.write("\033[2J\033[H")  # Clear screen & reset cursor
+            
+            print("" * random.randint(0,8)+ petal) #slight horizontal shift
+            time.sleep(0.15)
+
+            print(" " * random.randint(0,8)+ chimes) #print chime sound
             time.sleep(0.25)
+        
         print()  #space between drifts
 
 def append_journal_entry(nickname, entry):
@@ -37,7 +50,8 @@ def run (nickname ="angel"):
 
     entry = input("whenerver you're ready lovely, what's on your heart today?\n\n")
 
-    entry_line = []
+    entry_line = [] #list to hold multiple lines
+    entry_line.append(entry) #add first line to entry
     typeprint("\nyou can continue writing your journal entry. when you're done, just press enter on an empty line to finish:\n")
 
 #allows multi-line input until an empty line is entered
@@ -49,9 +63,9 @@ def run (nickname ="angel"):
              return
         if line.strip() == "": #check if user pressed enter on empty line
             break
-        entry_line += line + "\n" #adding line to entry with newline
+        entry_line.append(line) #add line to entry list
 
-    entry = "\n".join(entry_line).strip()
+    entry = "\n".join(entry_line).strip() #combine lines into single entry (string)
     if entry:
         append_journal_entry(nickname, entry)
         print(f"\nthank you so much for sharing with me {nickname}, i'm so proud of you for taking this time for yourself!\n")

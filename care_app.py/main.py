@@ -10,7 +10,7 @@ print("1)my mood check-in <3")
 print("2)my care journal")
 print("3)my self-care toolkit") 
 
-choice = input("\nchoose 1, 2, or 3: ")
+choice = input("\nchoose 1, 2, or 3: ") #user input to choose module
 
 if choice == "1":
     import check_in

@@ -8,13 +8,13 @@ def type_out(text, speed=0.05):
     """Simulates typing out text in the terminal."""
     for char in text:
         sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(speed)
+        sys.stdout.flush() #ensure immediate print
+        time.sleep(speed) #delay between chars
     print()  # Move to next line after typing
 
 #finding/creating data directory and files
-DATA_DIR = Path(__file__).parent.parent / "data"
-DATA_DIR.mkdir(exist_ok=True)
+DATA_DIR = Path(__file__).parent.parent / "data" #data folder path
+DATA_DIR.mkdir(exist_ok=True) #create data folder if it doesn't exist
 
 MOOD_LOG_FILE = DATA_DIR / "mood_log.txt"
 JOURNAL_FILE = DATA_DIR / "journal_entries.txt"
@@ -25,15 +25,15 @@ def blossom_drift(cycles=15, speed=0.22):
     width = 40
     height = 10
     blossom = "🌸"
-    positions = [(i, j) for i in range(height) for j in range(width)]
+    positions = [(i, j) for i in range(height) for j in range(width)] #all positions in grid
     
-    for _ in range(cycles):
-        x, y = positions[int(time.time() * 1000) % len(positions)]
+    for _ in range(cycles): #number of cycles
+        x, y = positions[int(time.time() * 1000) % len(positions)] #random position based on time
         sys.stdout.write("\033[2J\033[H")  # Clear screen & reset cursor
-        for i in range(height):
+        for i in range(height): #print grid
             for j in range(width):
                 if (i, j) == (x, y):
-                    sys.stdout.write(blossom)
+                    sys.stdout.write(blossom) #print blossom at position
                 else:
                     sys.stdout.write(" ")
             sys.stdout.write("\n")
@@ -45,7 +45,7 @@ def blossom_drift(cycles=15, speed=0.22):
         # code to save mood, now mood is passed in correctly ✨
         with open("mood_log.txt", "a") as file:
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            file.write(f"{timestamp} - Mood: {mood}\n")
+            file.write(f"{timestamp} - Mood: {mood}\n") #save mood with timestamp
     def save_journal(entry):
         # code to save journal entry, now entry is passed in correctly ✨
         with open("journal_entries.txt", "a") as file:

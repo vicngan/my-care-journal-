@@ -1,4 +1,4 @@
-affirmations = [
+affirmations = [ #list of affirmations
     "you’re doing your best, and that’s enough 🧸",
     "your feelings make sense, angel 💗",
     "you are healing even when it feels slow 🌿",
@@ -6,5 +6,5 @@ affirmations = [
     "you have survived 100% of your hardest days 💫",
     "your softness is not weakness — it’s wisdom 🌸"
     "small steps are STILL steps. i see you 🧡"
-]
+] 
 
