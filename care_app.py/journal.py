@@ -43,6 +43,17 @@ def append_journal_entry(nickname, entry):
     with open(filename, "a") as file: #open file in append mode
         file.write(f"{timestamp}\n{entry}\n\n") #write timestamp and entry
 
+#autosave journal entry function
+def autosave_journal_entry(nickname, entry_line, stop_event): #autosave function
+    last_saved_length = 0 #track last saved length
+    while not stop_event.is_set(): #loop until stop event is set
+        current_length = len(entry_line) #current length of entry
+        if current_length > last_saved_length: #if new content added
+            new_content = "\n".join(entry_line[last_saved_length:]).strip() #line content to save
+            append_journal_entry(nickname, new_content) #save new content
+            last_saved_length = current_length #update last saved length
+        time.sleep(3)  #check every 3 seconds
+
 def run (nickname ="angel"):
     typeprint(f"\nhi {nickname}! welcome to your care journal. let's take a moment to reflect on your day and jot down some thoughts.\n")
     typeprint("there's no rush lovely, just let your thoughts flow naturally and be kind to yourself.\n")
@@ -64,6 +75,7 @@ def run (nickname ="angel"):
         if line.strip() == "": #check if user pressed enter on empty line
             break
         entry_line.append(line) #add line to entry list
+        append_journal_entry(nickname, line) #save each line as it's entered
 
     entry = "\n".join(entry_line).strip() #combine lines into single entry (string)
     if entry:
